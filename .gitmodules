@@ -1,0 +1,12 @@
+[submodule "third_party/DeepSegmentor"]
+	path = third_party/DeepSegmentor
+	url = https://github.com/yhlleo/DeepSegmentor.git
+[submodule "third_party/Swin-Unet"]
+	path = third_party/Swin-Unet
+	url = https://github.com/HuCaoFighting/Swin-Unet.git
+[submodule "third_party/CrackSegFormer"]
+	path = third_party/CrackSegFormer
+	url = https://github.com/Li-Hubing/CrackSegFormer.git
+[submodule "third_party/BGCrack"]
+	path = third_party/BGCrack
+	url = https://github.com/hzlbbfrog/BGCrack.git
