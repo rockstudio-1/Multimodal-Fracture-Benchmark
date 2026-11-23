@@ -100,37 +100,37 @@ python scripts/evaluate.py \
 
 `--split` is `train`, `val`, or `all`. `--tolerance-radius` defaults to 2. `--skeleton-iterations` defaults to 5. The JSON report contains `iou`, `dice`, `precision`, `recall`, `tolerance_f1`, and `cldice`.
 
-Let \(TP\), \(FP\), and \(FN\) be the true-positive, false-positive, and false-negative counts.
+Let $TP$, $FP$, and $FN$ be the true-positive, false-positive, and false-negative counts.
 
-\[
+$$
 \mathrm{IoU}=\frac{TP}{TP+FP+FN},\qquad
 \mathrm{Dice}=\frac{2\,TP}{2\,TP+FP+FN}
-\]
+$$
 
-\[
+$$
 \mathrm{Precision}=\frac{TP}{TP+FP},\qquad
 \mathrm{Recall}=\frac{TP}{TP+FN}
-\]
+$$
 
-Tolerance F1 allows a boundary shift of radius \(r\). \(D_r\) is dilation by a square window of Chebyshev radius \(r\) (default \(r=2\)). \(P\) and \(G\) are the predicted and ground-truth crack sets.
+Tolerance F1 allows a boundary shift of radius $r$. $D_r$ is dilation by a square window of Chebyshev radius $r$ (default $r=2$). $P$ and $G$ are the predicted and ground-truth crack sets.
 
-\[
-\mathrm{Precision}_{r}=\frac{|P\cap D_r(G)|}{|P|},\qquad
-\mathrm{Recall}_{r}=\frac{|G\cap D_r(P)|}{|G|}
-\]
+$$
+\mathrm{Precision}_{r}=\frac{\left|P\cap D_r(G)\right|}{\left|P\right|},\qquad
+\mathrm{Recall}_{r}=\frac{\left|G\cap D_r(P)\right|}{\left|G\right|}
+$$
 
-\[
+$$
 \mathrm{Tolerance\text{-}F1}_{r}
 =\frac{2\,\mathrm{Precision}_{r}\,\mathrm{Recall}_{r}}{\mathrm{Precision}_{r}+\mathrm{Recall}_{r}}
-\]
+$$
 
-clDice compares soft skeletons. \(S(\cdot)\) is the iterative soft skeleton of Shit et al. (CVPR 2021), run for 5 iterations by default.
+clDice compares soft skeletons. $S(\cdot)$ is the iterative soft skeleton of Shit et al. (CVPR 2021), run for 5 iterations by default.
 
-\[
-T_{\mathrm{prec}}=\frac{|S(P)\cap G|}{|S(P)|},\qquad
-T_{\mathrm{sens}}=\frac{|S(G)\cap P|}{|S(G)|},\qquad
+$$
+T_{\mathrm{prec}}=\frac{\left|S(P)\cap G\right|}{\left|S(P)\right|},\qquad
+T_{\mathrm{sens}}=\frac{\left|S(G)\cap P\right|}{\left|S(G)\right|},\qquad
 \mathrm{clDice}=\frac{2\,T_{\mathrm{prec}}\,T_{\mathrm{sens}}}{T_{\mathrm{prec}}+T_{\mathrm{sens}}}
-\]
+$$
 
 ## Repository layout
 
