@@ -48,7 +48,7 @@ Download the dataset from Baidu Netdisk and extract it to `dataset/`:
 
 The extraction code will come soon.
 
-The archive is one directory of aligned modalities, not one folder per scan. `dataset/index.json` lists every sample and its `train` or `val` split.
+The archive is one directory of aligned modalities. `dataset/index.json` lists every sample and its `train` or `val` split.
 
 ```
 dataset/
